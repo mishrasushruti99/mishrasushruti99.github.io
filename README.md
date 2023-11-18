@@ -1,2 +1,2 @@
 # Repository for my website''
-![Leetcode Stats](https://leetcard.sushruti/sushruti)
+![LeetCode Stats](https://leetcard.jacoblin.cool/sushruti?theme=light&font=Abhaya%20Libre)
