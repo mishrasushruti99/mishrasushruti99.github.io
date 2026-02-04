@@ -172,12 +172,10 @@
           <h3>Multimodal RAG system</h3>
           
           <p style="text-align: justify">
-            I created a production-ready Multimodal RAG System in Python that can index and search both text documents (PDF, DOCX, TXT) and images using AI embeddings. 
-            The system includes:
-            Core infrastructure: Document processor, embedding generator (Sentence Transformers for text, CLIP for images), and ChromaDB vector database for similarity search
-            Three interfaces: REST API (FastAPI), command-line tool, and Python SDK for easy integration.
-            The system enables semantic search across multimodal content, cross-modal queries (search images with text), and can be used for document Q&A, 
-            knowledge bases, or content recommendation engines.
+            Built a production-ready Multimodal RAG System supporting 3 document formats (PDF, DOCX, TXT) plus images with 2 embedding models (Sentence Transformers for text, 
+            CLIP for images). Delivered 3 integration interfaces: REST API via FastAPI, CLI tool, and Python SDK. Implemented ChromaDB vector database for similarity search, 
+            enabling semantic retrieval across multimodal content and cross-modal queries (text-to-image search). The system provides end-to-end infrastructure including 
+            document processing, embedding generation, and vector storage, deployable for document Q&A, knowledge bases, and content recommendation use cases.
           </p>
           <a class="project-link" target="_blank" href="">Check it out!</a>
         </div>
@@ -196,11 +194,10 @@
           <h3>Doomscroll Prevention system</h3>
           
           <p style="text-align: justify">
-            This is an anti-doomscroll detector that uses your laptop's webcam and MediaPipe to track head pose in real-time. When you look down at your phone continuously 
-            for more than 3 seconds (indicating doomscrolling), it triggers an alarm video to break the habit.
-            The project has two versions: a standalone OpenCV app (app_7) that runs locally with instant MPV video playback, and a Streamlit web app (app_9) with browser-based interface. 
-            Both calibrate your neutral head position first, then monitor pitch angle using 3D pose estimation to detect prolonged downward gazing.
-            I also experimented with adding AI vision (Ollama's LLaVa model) to detect if you're actually on social media by analyzing screenshots, making it smarter than just detecting head position alone.
+            Built an anti-doomscroll detector with 2 functional versions: a standalone OpenCV application and a Streamlit web app. 
+            The system uses MediaPipe for real-time 3D head pose estimation via webcam, tracking pitch angle against a calibrated neutral position to detect 
+            downward phone-gazing. Triggers alarm video automatically after 3 seconds of continuous detection. Enhanced the base head-tracking with experimental 
+            AI vision integration using Ollama's LLaVa model for screenshot analysis, enabling smart detection of actual social media usage beyond simple head position monitoring.
           </p>
           <a class="project-link" target="_blank" href="">Check it out!</a>
         </div>
@@ -218,19 +215,12 @@
           <h3>LLM implementation and training infrastructure from scratch</h3>
           
           <p style="text-align: justify">
-Built a production-grade LLM training framework in PyTorch implementing the complete modern language model pipeline without high-level abstractions. The system covers every critical component from foundational transformer architecture to advanced RLHF alignment techniques used by frontier AI labs.
-Core Engineering:
-
-Implemented transformer architecture with multi-head attention, RoPE positional embeddings, RMSNorm, and SwiGLU activations
-Built KV caching system for 10x faster inference with sliding-window attention and attention sinks
-Developed Mixture-of-Experts (MoE) layer with dynamic expert routing and load balancing
-Engineered complete training pipeline: gradient accumulation, mixed-precision training, checkpointing, and learning rate scheduling
-
-Advanced Alignment Systems:
-
-Supervised fine-tuning (SFT) with instruction dataset processing and masked causal language modeling
-Reward modeling architecture with pairwise preference learning and Bradley-Terry loss
-Two RLHF implementations: PPO (with value head) and GRPO (group-relative baseline) with proper KL-divergence regularization
+Built a production-grade LLM training framework in PyTorch implementing 15+ core components across the complete modern language model pipeline. 
+            Delivered transformer architecture with 4 advanced features (multi-head attention, RoPE embeddings, RMSNorm, SwiGLU activations), 
+            KV caching system achieving 10x inference speedup, and Mixture-of-Experts layer with dynamic routing. Engineered 4 training optimizations: 
+            gradient accumulation, mixed-precision training, checkpointing, and LR scheduling. Implemented 3-stage alignment pipeline: supervised 
+            fine-tuning with masked causal modeling, reward modeling with Bradley-Terry loss, and 2 RLHF algorithms (PPO with value head and GRPO with group-relative baseline),
+            both with KL-divergence regularization for frontier AI lab-grade alignment capabilities
           </p>
           <a class="project-link" target="_blank" href="">Check it out!</a>
         </div>
@@ -270,13 +260,11 @@ Two RLHF implementations: PPO (with value head) and GRPO (group-relative baselin
           <h3>Jane Austen Style Transfer with LoRA Fine-Tuning</h3>
           
           <p style="text-align: justify">
-          Fine-tuned Mistral-7B on Jane Austen's complete literary works using LoRA (Low-Rank Adaptation) for parameter-efficient training. 
-          Processed 1,726 instruction-response pairs from 8 novels (Emma, Pride and Prejudice, Sense and Sensibility, etc.) to teach the model 19th-century English prose, 
-          formal dialogue patterns, and Austen's characteristic social dynamics.
-
-          LoRA training: Modified only 0.19% of parameters (13.6M/7.2B) while maintaining full fine-tuning quality
-          Memory optimization: Gradient checkpointing + FP16 mixed precision to fit on 16GB GPU (Tesla P100)
-          Custom data pipeline: Parsed JSONL datasets into instruction-following format for conversational fine-tuning
+          Fine-tuned Mistral-7B on Jane Austen's complete works using LoRA, processing 1,726 instruction-response pairs from 8 novels to replicate 19th-century prose 
+            and dialogue patterns. Achieved parameter-efficient training by modifying only 0.19% of model parameters (13.6M out of 7.2B) while maintaining 
+            full fine-tuning quality. Optimized for 16GB GPU deployment (Tesla P100) using 2 techniques: gradient checkpointing and FP16 mixed precision. 
+            Built custom data pipeline converting JSONL datasets into instruction-following format, enabling the model to generate Austen-style conversational 
+            responses with period-appropriate formal dialogue and social dynamics.
           </p>
           <a class="project-link" target="_blank" href="">Check it out!</a>
         </div>
